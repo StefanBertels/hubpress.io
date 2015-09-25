@@ -1,16 +1,62 @@
-Test
-====
+= Raspberry Pi Grundeinstellungen (Raspbian)
+:published_at: 2015-07-07
+:hp-tags: Raspbian, Raspberry Pi, Zeitzone, Hostname, Kennwort
 
+Dies ist eine Liste von Grundeinstellungen für Raspbian-Installationen
 
-sieh
-----
+## Kennwortänderung
 
+Das Kennwort lässt sich am einfachsten mittels Kommando ändern:
 
+```
+$ sudo raspi-config
+```
 
-`test`
+## Hostname
 
-  schau mal da
-  
-  
+Der Name des Rechners lässt sich in `/etc/hostname` ändern.
 
-asciidoc
+```
+$ sudo nano /etc/hostname
+```
+
+Auch in `/etc/hosts` sollte der neue Name eingetragen werden:
+
+```
+$ sudo nano /etc/hosts
+```
+
+Dateiinhalt (Beispiel):
+
+```
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+fe00::0         ip6-localnet
+ff00::0         ip6-mcastprefix
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+127.0.1.1       newhostname
+```
+
+## Login
+In ssh sollte der Root-Login mit Kennwort deaktiviert werden:
+
+```
+$ sudo nano /etc/ssh/sshd_config
+```
+
+Suche nach "PermitRootLogin" und dann wie folgt ändern:
+
+```
+PermitRootLogin without-password
+```
+
+## Zeitzone
+
+Die Zeitzone lässt sich umstellen mithilfe des Pakets tzdata:
+
+```
+$ sudo dpkg-reconfigure tzdata
+```
+Für Deutschland gilt die Zeitzone `Europe/Berlin`.
