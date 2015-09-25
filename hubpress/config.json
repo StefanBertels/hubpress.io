@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "StefanBertels",
-    "repositoryName": "stefanbertels.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"StefanBertels","repositoryName":"stefanbertels.github.io","branch":"master","delay":"2000"},"site":{"title":"Stefan Bertels Blog","url":"https://StefanBertels.github.io"},"socialnetwork":{},"theme":{"name":"Casper","url":"//StefanBertels.github.io/themes/Casper"}}
