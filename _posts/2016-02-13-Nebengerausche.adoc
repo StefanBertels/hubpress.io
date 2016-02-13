@@ -1,4 +1,4 @@
-= Nebengeräusche bei der Audioausgabe (Raspberry Pi)
+= Nebengeräusche
 :hp-tags: Raspbian, Raspberry Pi, Audio, Analog
 
 Beim Abspielen von Audiodateien oder Webradiostreams auf einem älteren Raspberry Pi 1 (B)
