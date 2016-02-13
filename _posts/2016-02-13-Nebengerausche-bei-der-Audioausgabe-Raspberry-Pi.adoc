@@ -1,0 +1,20 @@
+= Nebengeräusche bei der Audioausgabe (Raspberry Pi)
+:hp-tags: Raspbian, Raspberry Pi, Audio, Analog
+
+Beim Abspielen von Audiodateien oder Webradiostreams auf einem älteren Raspberry Pi 1 (B)
+habe ich mit einem analog angeschlossenen Kopfhörer leise Nebengeräusche festgestellt. 
+
+Aufgefallen sind die Geräusche in den Pausen (bei Stille). Das kann man gezielt testen,
+indem man das folgende Kommando ausführt:
+
+```
+$ aplay -t raw -r 48000 -c 2 -f S16_LE /dev/zero
+```
+
+Bei mir ließ sich das Geräusch abstellen, indem ich in der config.txt die Zeile
+
+```
+disable_audio_dither=1
+```
+
+aufgenommen habe. Diese config.txt befindet sich im Rootverzeichnis der SD-Karte mit der Raspbian-Installation.
