@@ -11,10 +11,11 @@ indem man das folgende Kommando ausführt:
 $ aplay -t raw -r 48000 -c 2 -f S16_LE /dev/zero
 ```
 
-Bei mir ließ sich das Geräusch abstellen, indem ich in der config.txt die Zeile
+Bei mir ließ sich das Geräusch abstellen, indem ich in der `/boot/config.txt` die Zeile
 
 ```
 disable_audio_dither=1
 ```
 
-aufgenommen habe. Diese config.txt befindet sich im Rootverzeichnis der SD-Karte mit der Raspbian-Installation.
+aufgenommen habe.
+
